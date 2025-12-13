@@ -1,4 +1,4 @@
 # python
-practice python code
-#writer 
+practice python code 
+# writer 
 Arif khan
