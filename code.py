@@ -5,8 +5,4 @@ for vow in a:
     if vow == "a" or vow == "e" or vow == "i" or vow == "o" or vow == "u":
          count += 1
 
-print(f"{a} has {count} vowel")        
-     
-
-
-
+print(f"{a} has {count} vowel")  
