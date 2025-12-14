@@ -6,3 +6,6 @@ for vow in a:
          count += 1
 
 print(f"{a} has {count} vowel")  
+
+# hi. check verification
+     
