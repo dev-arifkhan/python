@@ -40,3 +40,23 @@ list3 = list1 + list2
 list3.sort()
 print(list3)
 
+# even odd tuple.
+tup = (1,2,3,4,5,6,7,8,9,12,14,13,17,19)
+even_tup = ()
+odd_tup = ()
+for n in tup:
+    if n % 2 == 0:
+        even_tup = even_tup + (n,)
+    else:
+        odd_tup = odd_tup + (n,)
+print("even touple",even_tup)
+print("odd touple",odd_tup)
+
+# Dictionary 
+student = {
+    "arif": 95,
+    "suman":85,
+    "sakib":98,
+    "salman":75,
+
+}
