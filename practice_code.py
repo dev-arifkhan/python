@@ -60,3 +60,43 @@ student = {
     "salman":75,
 
 }
+
+print(" A - Add student" )
+print(" B - update marks")
+print(" C- search Student")
+print("D- Display all student")
+
+commant = input("Enter a commant according to avobe: ").lower()
+# upd_mark =
+# sch_stu =
+# dis_all_stu =
+
+def add_student ():
+    input("Enter name of student: ")
+    student.update({})
+def upd_marks():
+    print("b")
+def sch_stu():
+    student.get()
+    print("c")
+def dis_all_stu():
+    print(student.keys(std_name.valur))
+
+
+
+
+if commant == "a":
+    add_student()
+elif commant == "b":
+    upd_marks()
+elif commant == "c":
+    sch_stu()
+elif commant == "d":
+    std_name = input("Enter name to search: ")
+    dis_all_stu()
+else:
+    print("You choose wrong option ")
+    
+
+
+
