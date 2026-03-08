@@ -37,16 +37,7 @@ Customer1 =Bank(500,200)
 Customer2 = Bank("1000","5000")
 print(f"After withdrawal ₹{Customer1.withdraw} now account balance ₹{Customer1.total_balance()}")
 
-class Store:
-    def __init__(self,phone,price):
-        self.phone=phone
-        self.price=price
-    def full_details(self):
-        return f"{self.phone} price ₹{self.price}" 
-phone1=Store("iphone",1000)
-phone2=Store("Samsung",30000)
-print(phone1.price)
-print(phone2.full_details())
+
 
 class Student:
     college_name = "ABC college"
@@ -70,8 +61,29 @@ class Laptop:
 
     def get_info(self):
         print(f"laptop has {self.RAM} RAM & {self.storage} {self.storage_type}")
+    @staticmethod
+    def clac_discount(price,discount):
+        final_price = price - discount * price / 100
+        print(f"the discounted price of the laptop was {final_price}")
         
 l1 = Laptop("8gb","1TB")
 l2 = Laptop("4gb","500gb")
 l1.get_storage_info()
 l2.get_info()
+l1.clac_discount(4000,10)
+# design a online store for product (name,price) calculate the total no of product being created.
+
+# pythoh code run = product_count = 0 --> phone1=Store("iphone",1000) -->  __init__ 
+class Store:
+    product_count = 0                     
+    def __init__(self,phone,price):
+        self.phone=phone
+        self.price=price
+        Store.product_count += 1
+         
+phone1=Store("iphone",1000)
+phone2=Store("Samsung",30000)
+phone3=Store("iphone",1000)
+phone4=Store("Samsung",30000)
+
+print(f"the total number og product was {Store.product_count}")
