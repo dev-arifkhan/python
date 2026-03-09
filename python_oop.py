@@ -23,19 +23,6 @@ my_car = Car("Toyota","Corolla")
 print(my_car.brand)
 print(my_car.full_name())
 
-class Bank:
-    def __init__(self,balance,withdraw):
-        self.balance = balance
-        self.withdraw = withdraw
-    def total_balance (self):
-        return (self.balance-self.withdraw)
-    
-
-
-
-Customer1 =Bank(500,200)
-Customer2 = Bank("1000","5000")
-print(f"After withdrawal ₹{Customer1.withdraw} now account balance ₹{Customer1.total_balance()}")
 
 
 
@@ -87,3 +74,52 @@ phone3=Store("iphone",1000)
 phone4=Store("Samsung",30000)
 
 print(f"the total number og product was {Store.product_count}")
+
+# Encaptulation if anything want to private then use '__ ' before the name 
+class Bank:
+    def __init__(self,name,balance):
+        self.name = name
+        self.__balance = balance
+    def get_balance(self):
+        print(self.__balance)
+
+acount1 =Bank("Arif khan",10_000)
+print(acount1.name)
+acount1.get_balance()
+
+# Inheritance 
+# Single level Inheritance
+class Employee:
+    start_time = "9:00 AM"
+    end_time = "6:00 PM"
+
+class Teacher(Employee):
+    def __init__(self,name,sub):
+        self.name = name 
+        self.sub = sub
+
+p1 = Teacher("Rahul kumar ", "math")
+
+print(p1.name,p1.sub,p1.start_time,p1.end_time)
+
+# Multi level Inheritance 
+class Emply:
+    start_time = "9:00 AM"
+    end_time = "6:00 PM"
+
+class AdminStaff(Emply):
+    def __init__(self,role):
+        self.role = role
+
+class Accountant(AdminStaff):
+    def __init__(self, salary,role):
+        super().__init__(role)
+        self.salary = salary
+
+ac1 = Accountant(25_000,"CA")       
+
+print(ac1.salary,ac1.role,ac1.start_time,ac1.end_time)
+
+
+
+# multiple Inheritance
