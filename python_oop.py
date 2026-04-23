@@ -120,6 +120,20 @@ ac1 = Accountant(25_000,"CA")
 
 print(ac1.salary,ac1.role,ac1.start_time,ac1.end_time)
 
-
-
 # multiple Inheritance
+class Teachers:
+    def __init__(self,salary):
+        self.salary = salary
+
+class Students:
+    def __init__(self,pointer):
+        self.pointer = pointer
+
+class TA(Teachers,Students):
+    def __init__(self, salary,pointer,names):
+        super().__init__(salary)
+        Students.__init__(self,pointer)
+        self.names = names
+
+ta1 = TA(10_000 , 9.8 , "Arif khan")
+print(ta1.names,ta1.pointer,ta1.salary)
